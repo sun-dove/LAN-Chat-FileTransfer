@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星河局域网通讯</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">Q</div>
+          <div>
+            <p class="brand-title">星河局域网</p>
+            <p class="brand-subtitle">QQ 风格</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img class="avatar" src="https://dummyimage.com/80x80/4c63ff/ffffff&text=U" alt="avatar" />
+          <div>
+            <p class="profile-name" id="profileName">未设置昵称</p>
+            <p class="profile-status" id="statusText">未连接</p>
+          </div>
+          <div class="status-indicator" id="statusIndicator"></div>
+        </div>
+        <div class="menu">
+          <button class="menu-item active">聊天</button>
+          <button class="menu-item">文件</button>
+          <button class="menu-item">设置</button>
+        </div>
+        <div class="contact-list">
+          <p class="section-title">在线联系人</p>
+          <ul>
+            <li class="contact active">
+              <span class="dot online"></span>
+              <div>
+                <p class="contact-name">局域网群聊</p>
+                <p class="contact-preview">快速沟通 · 即时推送</p>
+              </div>
+            </li>
+            <li class="contact">
+              <span class="dot"></span>
+              <div>
+                <p class="contact-name">文件快传</p>
+                <p class="contact-preview">大文件高速共享</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">LAN Chat & File Transfer</p>
+            <h1>星河局域网通讯中心</h1>
+          </div>
+          <div class="topbar-actions">
+            <input
+              id="nameInput"
+              type="text"
+              placeholder="设置昵称"
+              maxlength="12"
+            />
+            <button id="sendBtn" class="primary">发送</button>
+          </div>
+        </header>
+
+        <main class="content">
+          <section class="chat-panel">
+            <div class="chat-window" id="chatWindow"></div>
+            <div class="chat-form">
+              <input
+                id="messageInput"
+                type="text"
+                placeholder="输入消息，Enter 发送"
+                maxlength="200"
+              />
+              <button id="sendBtnSecondary">发送</button>
+            </div>
+          </section>
+
+          <section class="file-panel">
+            <div class="panel-header">
+              <h2>文件快传</h2>
+              <p>拖拽或点击即可极速共享</p>
+            </div>
+            <div class="upload-area" id="uploadArea">
+              <div>
+                <p class="upload-title">拖拽文件到这里</p>
+                <p class="hint">或点击选择文件</p>
+              </div>
+              <input id="fileInput" type="file" />
+            </div>
+            <div class="progress" id="uploadProgress">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <ul class="file-list" id="fileList"></ul>
+          </section>
+        </main>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
